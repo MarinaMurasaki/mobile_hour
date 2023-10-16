@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/style.css">
+        <title>Mobile Hour - staff</title>
+    </head>
+    <body>
+      <main>
+        <%- include("partials/header.ejs") %>
+        <section class="side-bar">
+            <form action="/staff_login" method="post" class="staff_login">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" />
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" />
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10">Write down your comment here</textarea>
+                <input type="submit" value="Login" />
+                <a href="/" class="link-button">Back</a>
+            </form>
+        </section>
+        <%- include("partials/footer.ejs") %>
+    </main>
+    </body>
+</html>

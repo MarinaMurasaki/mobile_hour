@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/style.css">
+        <title>Mobile Hour - Products</title>
+    </head>
+    <body>
+        <main>
+            <!-- Header / navigation -->
+            <%- include("partials/header.ejs") %>
+            <%- include("partials/admin_nav.ejs", { accessRole }) %>
+
+            <section class="half-half-layout">
+                <section class="cols-4 data-list" id="list_productadmin">
+                    <span class="data-list-heading">Product name</span>
+                    <span class="data-list-heading">Brand</span>
+                    <span class="data-list-heading">Price</span>
+                    <span class="data-list-heading">Stock</span>
+                    <span>
+                        <a href="/product_admin" class="link-button">Reset</a>
+                    </span>
+
+                    <% for (const product of products) { %>
+                    <span>
+                        <%= product.product_name %>
+                    </span>
+                    <span>
+                        <%= product.brand %>
+                    </span>
+                    <span>
+                        $<%= parseFloat(product.product_price).toFixed(2) %>
+                    </span>
+                    <span>
+                        <%= product.product_stock %>
+                    </span>
+                    <span>
+                        <a href="/product_admin/edit?id=<%= product.product_id %>" class="link-button">
+                            Edit
+                        </a>
+                    </span>
+                    <% } %>
+                </section>
+                
+                <span>
+                    <a href="/product_admin/create" class="link-button">Create</a>
+                </span>
+            </section>
+
+            <!-- Content -->
+
+            <!-- Footer -->
+            <%- include("partials/footer.ejs") %>
+        </main>
+    </body>
+</html>

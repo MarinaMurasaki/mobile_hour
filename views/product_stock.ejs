@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <title>Mobile Hour - Products price</title>
+</head>
+<body>
+  <main>
+    <%- include("partials/header.ejs") %>
+      
+    <section class="phone-list-all">
+      <ul class="phone-list">
+        <% for (const product of products) { %>
+
+        <% if (product.brand == 'apple') { %>
+          <h1>Apple</h1>
+          <article class="phone-card" id="phone1">
+            <a href="#"><img src="/image/phone.png" alt="phone" height="300px"></a>
+            <h2><%= product.name %></h2>
+            <span>$<%= product.price %></span>
+            <p>$<%= product.price %> available</p>
+            <p><%= product.description %></p>
+            <a href="/product_checkout?id=<%= product.id %>">Buy</a>
+          </article>
+        <% } else if (product.brand == 'galaxy') { %>
+          <h2>Galaxy</h2>
+          <article class="phone-card" id="phone2">
+            <a href="#"><img src="/image/phone.png" alt="phone" height="300px"></a>
+            <h2><%= product.name %></h2>
+            <span>$<%= product.price %></span>
+            <p><%= product.stock %> available</p>
+            <p><%= product.description %></p>
+            <a href="/product_checkout?id=<%= product.id %>">Buy</a>
+          </article>
+        <% } else { %>
+          <h2>other</h2>
+          <article class="phone-card" id="phone3">
+            <a href="#"><img src="/image/phone.png" alt="phone" height="300px"></a>
+            <h2><%= product.name %></h2>
+            <span>$<%= product.price %></span>
+            <p><%= product.stock %> available</p>
+            <p><%= product.description %></p>
+            <a href="/product_checkout?id=<%= product.id %>">Buy</a>
+          </article>
+        <% } %>
+
+        <% } %>
+           </ul>
+    </section>
+    
+    <%- include("partials/footer.ejs") %>
+  </main>
+</body>

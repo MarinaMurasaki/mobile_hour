@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/style.css">
+        <title>Minute Coffee - Products</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@800&family=Nunito:wght@200&family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <!-- TODO: Header / navigation -->
+            <%- include("partials/header.ejs") %>
+
+            <section class="home-image">
+                <img src="../static/image/home.png" alt="Home">
+            </section>
+           
+            <section class="phone-list">
+                <% for (const product of products) { %>
+                <article class="phone-card" id="phone1">
+                    <a href="/views/product_comment.ejs"><img src="/image/phone.png" alt="phone" height="300px"></a>
+                    <h2><%= product.name %></h2>
+                    <span>$<%= product.price %></span>
+                    <p><%= product.description %></p>
+                    <a href="product_checkout?id=<%= product.id %>">Buy</a>
+                </article>
+                <article class="phone-card" id="phone2">
+                    <a href="#"><img src="/image/phone.png" alt="phone" height="300px"></a>
+                    <h2><%= product.name %></h2>
+                    <span>$<%= product.price %></span>
+                    <p><%= product.description %></p>
+                    <a href="product_checkout?id=<%= product.id %>">Buy</a>
+                </article>
+                <article class="phone-card" id="phone3">
+                    <a href="#"><img src="/image/phone.png" alt="phone" height="300px"></a>
+                    <h2><%= product.name %></h2>
+                    <span>$<%= product.price %></span>
+                    <p><%= product.description %></p>
+                    <a href="product_checkout?id=<%= product.id %>">Buy</a>
+                </article>
+                <% } %>
+            </section>
+
+            <!-- TODO: Footer -->
+            <%- include("partials/footer.ejs") %>
+        </main>
+    </body>
+</html>

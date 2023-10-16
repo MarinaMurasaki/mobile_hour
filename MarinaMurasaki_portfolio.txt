@@ -1,0 +1,7 @@
+Folder UUID: 13DF80B2-F187-47E7-BC72-0D53DF485401
+Folder Recovery key: B3BF33CEB8BA47E5BC6CD28D4A43D4AC
+
+
+****
+If you forget or lose the password, you can enter the recovery key to unlock your folder.
+****

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/style.css">
+        <title>Mobile Hour - Products</title>
+    </head>
+    <body>
+        <main>
+            <!-- Header / navigation -->
+            <%- include("partials/header.ejs") %>
+            <%- include("partials/admin_nav.ejs", { accessRole }) %>
+
+            <section class="half-half-layout">
+                <section class="cols-4 data-list" id="changelog_list">
+                    <span class="data-list-heading">Date</span>
+                    <span class="data-list-heading">Product ID</span>
+                    <span class="data-list-heading">Message</span>
+
+                    <% for (const changelog of changelogs) { %>
+                    <span>
+                        <%= changelog.date %>
+                    </span>
+                    <span>
+                        <%= changelog.product_id %>
+                    </span>
+                    <span>
+                        <%= changelog.message %>
+                    </span>
+                    <% } %>
+                </section>
+            
+            </section>
+
+            <!-- Content -->
+
+            <!-- Footer -->
+            <%- include("partials/footer.ejs") %>
+        </main>
+    </body>
+</html>

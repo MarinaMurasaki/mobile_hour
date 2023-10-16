@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/style.css">
+        <title>Mobile Hour - Staff</title>
+    </head>
+    <body>
+        <main>
+            <!-- Header / navigation -->
+            <%- include("partials/header.ejs") %>
+            <%- include("partials/admin_nav.ejs", { accessRole }) %>
+                <section class="order-list">
+                    <span class="order-list-heading" id="order-list-orderid">Order ID</span>
+                    <span class="order-list-heading" id="order-list-orderstatus">Order Status</span>
+                    <span class="order-list-heading" id="order-list-orderdate">Order Date</span>
+                    <span class="order-list-heading" id="order-list-customername">Customer Name</span>
+
+                    <% for (const order of orders) { %>
+                        
+                    <span>
+                        <%= order.id %>
+                    </span>
+                    <span>
+                        <%= order.status %>
+                    </span>
+                    <span>
+                        <%= order.datetime %>
+                    </span>
+                    <span>
+                        <%= order.customer_first_name %>
+                        <%= order.customer_last_name %>
+                    </span>
+                
+                    
+                    <% } %>
+                </section>
+
+            <!-- Footer -->
+            <%- include("partials/footer.ejs") %>
+        </main>
+    </body>
+</html>

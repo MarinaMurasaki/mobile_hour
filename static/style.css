@@ -1,0 +1,631 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+  
+@media screen and (min-width:1024px) {
+/* header */
+header > section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(8, 8, 106);
+    padding: 20px;
+    font-size: 1.2rem;
+    padding-right: 40px;
+}
+
+.search-form-001 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid #2589d0;
+    border-radius: 3px;
+    height: 30px;
+    width: 400px;
+    text-decoration: none;
+    color: white;
+}
+
+.search-form-001 input {
+    width: 370px;
+    height: 30px;
+    padding: 5px 15px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 1em;
+    outline: none;
+
+}
+
+.search-form-001 input::placeholder{
+    color: #767d83;
+}
+
+.search-form-001 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 40px;
+    border: none;
+    background-color: #2589d0;
+    cursor: pointer;
+}
+
+.search-form-001 button::after {
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%20%3Cpath%20d%3D%22M23.7%2020.8%2019%2016.1c-.2-.2-.5-.3-.8-.3h-.8c1.3-1.7%202-3.7%202-6C19.5%204.4%2015.1%200%209.7%200S0%204.4%200%209.7s4.4%209.7%209.7%209.7c2.3%200%204.3-.8%206-2v.8c0%20.3.1.6.3.8l4.7%204.7c.4.4%201.2.4%201.6%200l1.3-1.3c.5-.5.5-1.2.1-1.6zm-14-5.1c-3.3%200-6-2.7-6-6s2.7-6%206-6%206%202.7%206%206-2.6%206-6%206z%22%20fill%3D%22%23fff%22%3E%3C%2Fpath%3E%20%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    content: '';
+}
+
+header > section > a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.hamburger-menu {
+    display: none;
+}
+nav {
+    background-color: #2589d0;
+}
+
+nav > ul > li > a {
+    color: white;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding: 0.5em;
+    width: 200px;
+    text-decoration: none;
+}
+
+.phone-list {
+    display: flex;
+    background-color: #d3d6d9;
+    padding: 20px;
+    overflow: scroll;
+}
+
+.phone-card {
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+}
+
+.phone-card > img {
+    padding: 10px;
+}
+
+.phone-card > a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    margin: 10px;
+}
+
+.phone-card > a:hover {
+    color: #000; 
+    background-color: #c9c9c9;
+}
+
+/* checkout page */
+.form-grid {
+    display: flex;
+    padding: 10px;
+}
+
+.form-grid > input, .form-grid > label {
+    margin: 10px;
+    display: flex;
+    text-align: center;
+}
+
+.link-button {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.pay {
+    width: 50px;
+    display: flex;
+    text-align: center;
+}
+
+/* products-all page*/
+.phone-list-all {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #d3d6d9;
+    padding: 20px;
+}
+
+/* product_brand */
+#phone1-brand, #phone2-brand, #phone3-brand {
+    flex-direction: column;
+}
+
+/* Style the Login button */
+.staff_login input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.staff_login input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/*footer*/
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(8, 8, 106);
+    color: white;
+    padding: 10px;
+}
+
+ footer > a {
+    text-decoration: none;
+    color: white;
+ }
+}
+
+@media screen and (max-width: 428px) {
+/* header */
+header > section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(8, 8, 106);
+    padding: 10px;
+}
+.search-form-001 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid #2589d0;
+    border-radius: 3px;
+    height: 30px;
+    width: 130px;
+}
+
+.search-form-001 input {
+    width: 100px;
+    height: 30px;
+    padding: 5px 15px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 1em;
+    outline: none;
+}
+
+.search-form-001 input::placeholder{
+    color: #767d83;
+}
+
+.search-form-001 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    border: none;
+    background-color: #2589d0;
+    cursor: pointer;
+}
+
+.search-form-001 button::after {
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%20%3Cpath%20d%3D%22M23.7%2020.8%2019%2016.1c-.2-.2-.5-.3-.8-.3h-.8c1.3-1.7%202-3.7%202-6C19.5%204.4%2015.1%200%209.7%200S0%204.4%200%209.7s4.4%209.7%209.7%209.7c2.3%200%204.3-.8%206-2v.8c0%20.3.1.6.3.8l4.7%204.7c.4.4%201.2.4%201.6%200l1.3-1.3c.5-.5.5-1.2.1-1.6zm-14-5.1c-3.3%200-6-2.7-6-6s2.7-6%206-6%206%202.7%206%206-2.6%206-6%206z%22%20fill%3D%22%23fff%22%3E%3C%2Fpath%3E%20%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    content: '';
+}
+
+header > section > a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.header-menu > img {
+    height: 50px;
+    width: 50px;
+}
+
+.header-menu > a {
+    display: none;
+}
+
+/* hide the checkbox */
+.drawer_hidden {
+    display: none;
+}
+
+/* space for hamburger-menu */
+.drawer_open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+  }
+
+  /* hanburger-menu icon */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* adjust the position */
+.drawer_open span:before {
+    bottom: 8px;
+  }
+  
+  /* adjust the position */
+  .drawer_open span:after {
+    top: 8px;
+  }
+
+  /* transparent in the middle once the icon has been clicked */
+#drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  /* change the icon design after clicking */
+  #drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  
+  #drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* design menu */
+.nav_content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 99;
+    background: #fff;
+    transition: .5s;
+  }
+
+  /* delete black circle */
+.nav_list {
+    list-style: none;
+  }
+  
+  /* display menu once the icon clicked*/
+  #drawer_input:checked ~ .nav_content {
+    left: 0;
+  }
+    
+.gnav {
+    display: none;
+}
+
+.phone-list {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #d3d6d9;
+    padding: 20px;
+}
+
+.phone-card {
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+}
+
+.phone-card > img {
+    padding: 10px;
+}
+
+.phone-card > a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    margin: 10px;
+}
+
+.phone-card > a:hover {
+    color: #000; 
+    background-color: #c9c9c9;
+}
+
+/* products-all page*/
+.phone-list-all {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #d3d6d9;
+    padding: 20px;
+}
+
+.buy {
+    padding: 10px;
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(8, 8, 106);
+    color: white;
+    padding: 10px;
+}
+
+ footer > a {
+    text-decoration: none;
+    color: white;
+ }
+}
+
+.gnav_wrapper {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+  }
+
+/* Admin page */ 
+.side-bar {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the form */
+.staff_login {
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.staff_login label {
+    margin-bottom: 8px;
+}
+
+.staff_login input[type="text"],
+.staff_login input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.staff_login input[type="submit"] {
+    display: inline-block;
+    background-color: #333;
+    font-size: large;
+    color: #fff;
+    padding: 12px 24px; /* Increase padding for a larger button */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+/* Style the Back button */
+.link-button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+.link-button:hover {
+    background-color: #555;
+}
+
+/* Style the admin navigation */
+.admin_nav > a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    background-color: black;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+}
+
+.admin_nav, .data-list {
+    display: flex;
+}
+
+/* Style the data list section */
+.data-list {
+    width: 60%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.data-list-heading {
+    font-weight: bold;
+    display: flex;
+}
+
+.data-list span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Style the link button */
+.link-button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.link-button:hover {
+    background-color: #555;
+}
+
+/* Style the form section */
+.form-grid {
+    width: 35%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-grid label {
+    font-weight: bold;
+}
+
+.form-grid input[type="text"],
+.form-grid input[type="password"],
+.form-grid select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-grid select {
+    padding: 5px;
+}
+
+#data-list-name, #data-list-username, #data-list-role {
+    display: flex;
+}
+
+.form-grid input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.form-grid input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.half-half-layout {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cols-4 {
+    flex-basis: 70%;
+}
+
+.data-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.data-list-heading {
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.order-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+#list_productadmin {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+#changelog_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+article {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.link-button {
+    background-color: #0074d9;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.link-button:hover {
+    background-color: #0056b3;
+}
+
+.data-list-heading {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-weight: bold;
+    justify-content: center;
+}

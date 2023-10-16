@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/style.css">
+        <title>Mobile Hour - Products</title>
+    </head>
+    <body>
+        <main>
+            <!-- Header / navigation -->
+            <%- include("partials/header.ejs") %>
+            <%- include("partials/admin_nav.ejs", { accessRole }) %>
+
+            <section class="half-half-layout">
+                <!-- Form section -->
+                <form action="/product_admin/edit?id=<%= editProduct.id %>" method="post" class="form-grid">
+                    <input type="hidden" name="id" value="<%= editProduct.id %>" required>
+
+                    <label for="name">Product name</label>
+                    <input type="text" name="name" id="name" value="<%= editProduct.name %>"
+                        placeholder="Please enter product name" required>
+
+                    <label for="brand">Brand</label>
+                    <input type="text" name="brand" id="brand"
+                        value="<%= editProduct.brand %>"
+                        placeholder="Please enter brand" required>
+
+                    <label for="price">Price</label>
+                    <input type="number" name="price" id="price"
+                        value="<%= editProduct.price %>"
+                        placeholder="Please enter price" required>
+
+                    <label for="stock">Stock level</label>
+                    <input type="number" name="stock" id="stock"
+                        value="<%= editProduct.stock %>"
+                        placeholder="Please enter stock level" required>
+
+                    <label for="description">Description</label>
+                    <input type="text" name="description" id="description"
+                        value="<%= editProduct.description %>"
+                        placeholder="Please enter description" required>
+
+                    <% if (editProduct.id == "0") { %>
+                    <input type="submit" name="action" value="create">
+                    <% } else { %>
+                    <input type="submit" name="action" value="delete">
+                    <input type="submit" name="action" value="update">
+                    <% } %>
+                </form>
+            </section>
+
+            <!-- Content -->
+
+            <!-- Footer -->
+            <%- include("partials/footer.ejs") %>
+        </main>
+    </body>
+</html>
